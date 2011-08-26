@@ -11,24 +11,32 @@
 		E28273BE1406D33100CD749E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E28273BC1406D33100CD749E /* InfoPlist.strings */; };
 		E28273C01406D33100CD749E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E28273BF1406D33100CD749E /* main.m */; };
 		E28273C41406D33100CD749E /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = E28273C21406D33100CD749E /* Credits.rtf */; };
-		E28273C71406D33100CD749E /* Arduino_Helicopter_ControllerAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E28273C61406D33100CD749E /* Arduino_Helicopter_ControllerAppDelegate.m */; };
+		E28273C71406D33100CD749E /* ArduinoCopterS107.m in Sources */ = {isa = PBXBuildFile; fileRef = E28273C61406D33100CD749E /* ArduinoCopterS107.m */; };
 		E28273CA1406D33100CD749E /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = E28273C81406D33100CD749E /* MainMenu.xib */; };
+		E28273D21406DEF700CD749E /* rcController.m in Sources */ = {isa = PBXBuildFile; fileRef = E28273D11406DEF700CD749E /* rcController.m */; };
+		E28273D5140701FE00CD749E /* SerialCommunication.m in Sources */ = {isa = PBXBuildFile; fileRef = E28273D4140701FE00CD749E /* SerialCommunication.m */; };
+		E28273DC140703DA00CD749E /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E28273DB140703D900CD749E /* IOKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		E28273AF1406D33100CD749E /* Arduino Helicopter Controller.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Arduino Helicopter Controller.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E28273AF1406D33100CD749E /* ArduinoCopterS107.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ArduinoCopterS107.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E28273B31406D33100CD749E /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		E28273B61406D33100CD749E /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		E28273B71406D33100CD749E /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		E28273B81406D33100CD749E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		E28273BB1406D33100CD749E /* Arduino Helicopter Controller-Info.plist */ = {isa = PBXFileReference; path = "Arduino Helicopter Controller-Info.plist"; sourceTree = "<group>"; };
+		E28273BB1406D33100CD749E /* ArduinoCopterS107-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ArduinoCopterS107-Info.plist"; sourceTree = "<group>"; };
 		E28273BD1406D33100CD749E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		E28273BF1406D33100CD749E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		E28273C11406D33100CD749E /* Arduino Helicopter Controller-Prefix.pch */ = {isa = PBXFileReference; path = "Arduino Helicopter Controller-Prefix.pch"; sourceTree = "<group>"; };
+		E28273C11406D33100CD749E /* ArduinoCopterS107-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ArduinoCopterS107-Prefix.pch"; sourceTree = "<group>"; };
 		E28273C31406D33100CD749E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
-		E28273C51406D33100CD749E /* Arduino_Helicopter_ControllerAppDelegate.h */ = {isa = PBXFileReference; path = Arduino_Helicopter_ControllerAppDelegate.h; sourceTree = "<group>"; };
-		E28273C61406D33100CD749E /* Arduino_Helicopter_ControllerAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Arduino_Helicopter_ControllerAppDelegate.m; sourceTree = "<group>"; };
+		E28273C51406D33100CD749E /* ArduinoCopterS107.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = ArduinoCopterS107.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		E28273C61406D33100CD749E /* ArduinoCopterS107.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = ArduinoCopterS107.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		E28273C91406D33100CD749E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		E28273D01406DEF600CD749E /* rcController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = rcController.h; sourceTree = "<group>"; };
+		E28273D11406DEF700CD749E /* rcController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = rcController.m; sourceTree = "<group>"; };
+		E28273D3140701FE00CD749E /* SerialCommunication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SerialCommunication.h; sourceTree = "<group>"; };
+		E28273D4140701FE00CD749E /* SerialCommunication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SerialCommunication.m; sourceTree = "<group>"; };
+		E28273DB140703D900CD749E /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +44,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E28273DC140703DA00CD749E /* IOKit.framework in Frameworks */,
 				E28273B41406D33100CD749E /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -46,7 +55,8 @@
 		E28273A41406D33000CD749E = {
 			isa = PBXGroup;
 			children = (
-				E28273B91406D33100CD749E /* Arduino Helicopter Controller */,
+				E28273DB140703D900CD749E /* IOKit.framework */,
+				E28273B91406D33100CD749E /* ArduinoCopterS107 */,
 				E28273B21406D33100CD749E /* Frameworks */,
 				E28273B01406D33100CD749E /* Products */,
 			);
@@ -55,7 +65,7 @@
 		E28273B01406D33100CD749E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				E28273AF1406D33100CD749E /* Arduino Helicopter Controller.app */,
+				E28273AF1406D33100CD749E /* ArduinoCopterS107.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -79,24 +89,29 @@
 			name = "Other Frameworks";
 			sourceTree = "<group>";
 		};
-		E28273B91406D33100CD749E /* Arduino Helicopter Controller */ = {
+		E28273B91406D33100CD749E /* ArduinoCopterS107 */ = {
 			isa = PBXGroup;
 			children = (
-				E28273C51406D33100CD749E /* Arduino_Helicopter_ControllerAppDelegate.h */,
-				E28273C61406D33100CD749E /* Arduino_Helicopter_ControllerAppDelegate.m */,
+				E28273C51406D33100CD749E /* ArduinoCopterS107.h */,
+				E28273C61406D33100CD749E /* ArduinoCopterS107.m */,
 				E28273C81406D33100CD749E /* MainMenu.xib */,
+				E28273D01406DEF600CD749E /* rcController.h */,
+				E28273D11406DEF700CD749E /* rcController.m */,
 				E28273BA1406D33100CD749E /* Supporting Files */,
+				E28273D3140701FE00CD749E /* SerialCommunication.h */,
+				E28273D4140701FE00CD749E /* SerialCommunication.m */,
 			);
+			name = ArduinoCopterS107;
 			path = "Arduino Helicopter Controller";
 			sourceTree = "<group>";
 		};
 		E28273BA1406D33100CD749E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				E28273BB1406D33100CD749E /* Arduino Helicopter Controller-Info.plist */,
+				E28273BB1406D33100CD749E /* ArduinoCopterS107-Info.plist */,
 				E28273BC1406D33100CD749E /* InfoPlist.strings */,
 				E28273BF1406D33100CD749E /* main.m */,
-				E28273C11406D33100CD749E /* Arduino Helicopter Controller-Prefix.pch */,
+				E28273C11406D33100CD749E /* ArduinoCopterS107-Prefix.pch */,
 				E28273C21406D33100CD749E /* Credits.rtf */,
 			);
 			name = "Supporting Files";
@@ -105,9 +120,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		E28273AE1406D33000CD749E /* Arduino Helicopter Controller */ = {
+		E28273AE1406D33000CD749E /* ArduinoCopterS107 */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E28273CD1406D33100CD749E /* Build configuration list for PBXNativeTarget "Arduino Helicopter Controller" */;
+			buildConfigurationList = E28273CD1406D33100CD749E /* Build configuration list for PBXNativeTarget "ArduinoCopterS107" */;
 			buildPhases = (
 				E28273AB1406D33000CD749E /* Sources */,
 				E28273AC1406D33000CD749E /* Frameworks */,
@@ -117,9 +132,9 @@
 			);
 			dependencies = (
 			);
-			name = "Arduino Helicopter Controller";
+			name = ArduinoCopterS107;
 			productName = "Arduino Helicopter Controller";
-			productReference = E28273AF1406D33100CD749E /* Arduino Helicopter Controller.app */;
+			productReference = E28273AF1406D33100CD749E /* ArduinoCopterS107.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -127,7 +142,10 @@
 /* Begin PBXProject section */
 		E28273A61406D33000CD749E /* Project object */ = {
 			isa = PBXProject;
-			buildConfigurationList = E28273A91406D33000CD749E /* Build configuration list for PBXProject "Arduino Helicopter Controller" */;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = E28273A91406D33000CD749E /* Build configuration list for PBXProject "ArduinoCopterS107" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -139,7 +157,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				E28273AE1406D33000CD749E /* Arduino Helicopter Controller */,
+				E28273AE1406D33000CD749E /* ArduinoCopterS107 */,
 			);
 		};
 /* End PBXProject section */
@@ -163,7 +181,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				E28273C01406D33100CD749E /* main.m in Sources */,
-				E28273C71406D33100CD749E /* Arduino_Helicopter_ControllerAppDelegate.m in Sources */,
+				E28273C71406D33100CD749E /* ArduinoCopterS107.m in Sources */,
+				E28273D21406DEF700CD749E /* rcController.m in Sources */,
+				E28273D5140701FE00CD749E /* SerialCommunication.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -220,6 +240,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = ArduinoCopterS107;
 				SDKROOT = macosx;
 			};
 			name = Debug;
@@ -240,6 +261,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				PRODUCT_NAME = ArduinoCopterS107;
 				SDKROOT = macosx;
 			};
 			name = Release;
@@ -248,9 +270,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Arduino Helicopter Controller/Arduino Helicopter Controller-Prefix.pch";
-				INFOPLIST_FILE = "Arduino Helicopter Controller/Arduino Helicopter Controller-Info.plist";
+				GCC_PREFIX_HEADER = "Arduino Helicopter Controller/ArduinoCopterS107-Prefix.pch";
+				INFOPLIST_FILE = "Arduino Helicopter Controller/ArduinoCopterS107-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -259,9 +283,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Arduino Helicopter Controller/Arduino Helicopter Controller-Prefix.pch";
-				INFOPLIST_FILE = "Arduino Helicopter Controller/Arduino Helicopter Controller-Info.plist";
+				GCC_PREFIX_HEADER = "Arduino Helicopter Controller/ArduinoCopterS107-Prefix.pch";
+				INFOPLIST_FILE = "Arduino Helicopter Controller/ArduinoCopterS107-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -269,7 +295,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		E28273A91406D33000CD749E /* Build configuration list for PBXProject "Arduino Helicopter Controller" */ = {
+		E28273A91406D33000CD749E /* Build configuration list for PBXProject "ArduinoCopterS107" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E28273CB1406D33100CD749E /* Debug */,
@@ -278,13 +304,14 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E28273CD1406D33100CD749E /* Build configuration list for PBXNativeTarget "Arduino Helicopter Controller" */ = {
+		E28273CD1406D33100CD749E /* Build configuration list for PBXNativeTarget "ArduinoCopterS107" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E28273CE1406D33100CD749E /* Debug */,
 				E28273CF1406D33100CD749E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
