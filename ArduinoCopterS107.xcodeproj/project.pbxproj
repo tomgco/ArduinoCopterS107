@@ -7,18 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E22EF9DA1408257700D6D70C /* RemoteControl.m in Sources */ = {isa = PBXBuildFile; fileRef = E22EF9D81408257700D6D70C /* RemoteControl.m */; };
+		E22EF9DB1408257700D6D70C /* RemoteControl.xib in Resources */ = {isa = PBXBuildFile; fileRef = E22EF9D91408257700D6D70C /* RemoteControl.xib */; };
+		E22EF9E2140827DC00D6D70C /* RemoteControlView.m in Sources */ = {isa = PBXBuildFile; fileRef = E22EF9E1140827DC00D6D70C /* RemoteControlView.m */; };
 		E28273B41406D33100CD749E /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E28273B31406D33100CD749E /* Cocoa.framework */; };
 		E28273BE1406D33100CD749E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E28273BC1406D33100CD749E /* InfoPlist.strings */; };
 		E28273C01406D33100CD749E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E28273BF1406D33100CD749E /* main.m */; };
 		E28273C41406D33100CD749E /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = E28273C21406D33100CD749E /* Credits.rtf */; };
 		E28273C71406D33100CD749E /* ArduinoCopterS107.m in Sources */ = {isa = PBXBuildFile; fileRef = E28273C61406D33100CD749E /* ArduinoCopterS107.m */; };
 		E28273CA1406D33100CD749E /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = E28273C81406D33100CD749E /* MainMenu.xib */; };
-		E28273D21406DEF700CD749E /* rcController.m in Sources */ = {isa = PBXBuildFile; fileRef = E28273D11406DEF700CD749E /* rcController.m */; };
 		E28273D5140701FE00CD749E /* SerialCommunication.m in Sources */ = {isa = PBXBuildFile; fileRef = E28273D4140701FE00CD749E /* SerialCommunication.m */; };
 		E28273DC140703DA00CD749E /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E28273DB140703D900CD749E /* IOKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E22EF9D71408257700D6D70C /* RemoteControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RemoteControl.h; sourceTree = "<group>"; };
+		E22EF9D81408257700D6D70C /* RemoteControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RemoteControl.m; sourceTree = "<group>"; };
+		E22EF9D91408257700D6D70C /* RemoteControl.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RemoteControl.xib; sourceTree = "<group>"; };
+		E22EF9E0140827DC00D6D70C /* RemoteControlView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RemoteControlView.h; sourceTree = "<group>"; };
+		E22EF9E1140827DC00D6D70C /* RemoteControlView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RemoteControlView.m; sourceTree = "<group>"; };
 		E28273AF1406D33100CD749E /* ArduinoCopterS107.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ArduinoCopterS107.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E28273B31406D33100CD749E /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		E28273B61406D33100CD749E /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -32,8 +39,6 @@
 		E28273C51406D33100CD749E /* ArduinoCopterS107.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = ArduinoCopterS107.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		E28273C61406D33100CD749E /* ArduinoCopterS107.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = ArduinoCopterS107.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		E28273C91406D33100CD749E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
-		E28273D01406DEF600CD749E /* rcController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = rcController.h; sourceTree = "<group>"; };
-		E28273D11406DEF700CD749E /* rcController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = rcController.m; sourceTree = "<group>"; };
 		E28273D3140701FE00CD749E /* SerialCommunication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SerialCommunication.h; sourceTree = "<group>"; };
 		E28273D4140701FE00CD749E /* SerialCommunication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SerialCommunication.m; sourceTree = "<group>"; };
 		E28273DB140703D900CD749E /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
@@ -95,8 +100,11 @@
 				E28273C51406D33100CD749E /* ArduinoCopterS107.h */,
 				E28273C61406D33100CD749E /* ArduinoCopterS107.m */,
 				E28273C81406D33100CD749E /* MainMenu.xib */,
-				E28273D01406DEF600CD749E /* rcController.h */,
-				E28273D11406DEF700CD749E /* rcController.m */,
+				E22EF9D71408257700D6D70C /* RemoteControl.h */,
+				E22EF9D81408257700D6D70C /* RemoteControl.m */,
+				E22EF9E0140827DC00D6D70C /* RemoteControlView.h */,
+				E22EF9E1140827DC00D6D70C /* RemoteControlView.m */,
+				E22EF9D91408257700D6D70C /* RemoteControl.xib */,
 				E28273BA1406D33100CD749E /* Supporting Files */,
 				E28273D3140701FE00CD749E /* SerialCommunication.h */,
 				E28273D4140701FE00CD749E /* SerialCommunication.m */,
@@ -170,6 +178,7 @@
 				E28273BE1406D33100CD749E /* InfoPlist.strings in Resources */,
 				E28273C41406D33100CD749E /* Credits.rtf in Resources */,
 				E28273CA1406D33100CD749E /* MainMenu.xib in Resources */,
+				E22EF9DB1408257700D6D70C /* RemoteControl.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -182,8 +191,9 @@
 			files = (
 				E28273C01406D33100CD749E /* main.m in Sources */,
 				E28273C71406D33100CD749E /* ArduinoCopterS107.m in Sources */,
-				E28273D21406DEF700CD749E /* rcController.m in Sources */,
 				E28273D5140701FE00CD749E /* SerialCommunication.m in Sources */,
+				E22EF9DA1408257700D6D70C /* RemoteControl.m in Sources */,
+				E22EF9E2140827DC00D6D70C /* RemoteControlView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -11,11 +11,14 @@
 @implementation ArduinoCopterS107
 
 @synthesize window = _window,
-						serialCommunication;
+						serialCommunication,
+						remoteControl;
 
-- (void)applicationDidFinishLaunching:(NSNotification *)aNotification
-{
+- (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
+	
+	remoteControl = [[RemoteControl alloc] initWithNibName:@"RemoteControl" bundle:nil];
 	// Insert code here to initialize your application
+	[self.window setContentView:remoteControl.view];
 	serialCommunication = [SerialCommunication sharedSerialConnection];
 	if (true /* auto connect to last device / if not try auto connecting to 'usbserial' */)
 		[self updateSerialPortsInMenu:@"usbmodem"];

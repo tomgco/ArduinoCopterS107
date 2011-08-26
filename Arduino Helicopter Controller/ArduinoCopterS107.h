@@ -8,16 +8,19 @@
 
 #import <Cocoa/Cocoa.h>
 #import "SerialCommunication.h"
+#import "RemoteControl.h"
 
 @interface ArduinoCopterS107 : NSObject <NSApplicationDelegate> {
 	NSWindow *_window;
 	SerialCommunication *serialCommunication;
+	RemoteControl *remoteControl;
 	NSString *selectedSerialPort;
 	IBOutlet NSMenu *serialPortsMenuList;
 }
 
 @property (strong) IBOutlet NSWindow *window;
 @property (retain) SerialCommunication *serialCommunication;
+@property (retain, nonatomic) IBOutlet RemoteControl *remoteControl;
 
 - (void) updateSerialPortsInMenu: (NSString *) selectedItem;
 - (IBAction)openChosenSerialConnection:(id)sender;
