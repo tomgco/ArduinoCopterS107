@@ -41,5 +41,11 @@ Icon?
 *xcodeproj/*mode*
 *xcodeproj/*pbxuser
 *xcodeproj/*per*
-*xcodeproj/project.xcworkspace
-*xcodeproj/xcuserdata
+*xcodeproj/project.xcworkspace*
+*xcodeproj/xcuserdata*
+build/
+.DS_Store
+**/*.pbxuser
+*.mode2v3
+*.mode1v3
+**/*.perspectivev*
