@@ -55,8 +55,7 @@
 
 - (void) sendPacket:(int)channel yaw:(int)y pitch:(int)p throttle:(int)t trimAdjust:(int)trimAdjust {
 	int throttleWithChannel = (channel == CHANNEL1) ? t : (t + 128);
-	NSString *packet = [[NSString alloc] initWithFormat:@"%c%c%c%c%c%c", 0x4C, 0x4F, y, p, throttleWithChannel, trimAdjust];
-	
+	NSString *packet = [[NSString alloc] initWithFormat:@"%c%c%c%c%c%c", 0x4C, 0x4F, y + 1, p + 1, throttleWithChannel + 1, trimAdjust + 1];
 	[serialCommunication writePacket:packet];
 }			
 

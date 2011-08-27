@@ -59,6 +59,8 @@
 							<int key="NSCellFlags2">0</int>
 							<string key="NSCellIdentifier">_NS:2154</string>
 							<reference key="NSControlView" ref="356573298"/>
+							<double key="NSValue">1</double>
+							<double key="NSMinValue">1</double>
 							<double key="NSMaxValue">127</double>
 							<double key="NSWarningValue">2</double>
 							<double key="NSCriticalValue">2</double>
@@ -81,7 +83,7 @@
 							<string key="NSCellIdentifier">_NS:726</string>
 							<reference key="NSControlView" ref="1006953700"/>
 							<double key="NSMaxValue">127</double>
-							<double key="NSMinValue">0.0</double>
+							<double key="NSMinValue">1</double>
 							<double key="NSValue">63</double>
 							<double key="NSAltIncValue">0.0</double>
 							<int key="NSNumberOfTickMarks">0</int>
@@ -224,7 +226,7 @@
 							<string key="NSCellIdentifier">_NS:3968</string>
 							<reference key="NSControlView" ref="368357058"/>
 							<double key="NSMaxValue">127</double>
-							<double key="NSMinValue">0.0</double>
+							<double key="NSMinValue">1</double>
 							<double key="NSValue">63</double>
 							<double key="NSAltIncValue">0.0</double>
 							<int key="NSNumberOfTickMarks">0</int>
@@ -250,7 +252,7 @@
 							<string key="NSCellIdentifier">_NS:40</string>
 							<reference key="NSControlView" ref="488946544"/>
 							<double key="NSMaxValue">127</double>
-							<double key="NSMinValue">0.0</double>
+							<double key="NSMinValue">1</double>
 							<double key="NSValue">63</double>
 							<double key="NSAltIncValue">0.0</double>
 							<int key="NSNumberOfTickMarks">0</int>
@@ -275,8 +277,8 @@
 							<string key="NSCellIdentifier">_NS:40</string>
 							<reference key="NSControlView" ref="183467365"/>
 							<double key="NSMaxValue">127</double>
-							<double key="NSMinValue">0.0</double>
-							<double key="NSValue">0.0</double>
+							<double key="NSMinValue">1</double>
+							<double key="NSValue">1</double>
 							<double key="NSAltIncValue">0.0</double>
 							<int key="NSNumberOfTickMarks">0</int>
 							<int key="NSTickMarkPosition">0</int>
