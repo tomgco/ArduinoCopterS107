@@ -33,18 +33,22 @@
 	
 	switch ([theEvent keyCode]) {
 		case 116: // page up
-			[throttle setIntegerValue:throttle.integerValue + 10];
+			[throttle setIntegerValue:throttle.integerValue + 5];
 			break;
 		case 121: // page down
-			[throttle setIntegerValue:throttle.integerValue - 10];
+			[throttle setIntegerValue:throttle.integerValue - 5];
 			break;
 		case 126: // up
+			[pitch setIntegerValue:pitch.integerValue - 15];
 			break;
 		case 125: // down
+			[pitch setIntegerValue:pitch.integerValue + 15];
 			break;
 		case 124: // right
+			[yaw setIntegerValue:yaw.integerValue - 5];
 			break;
 		case 123: // left
+			[yaw setIntegerValue:yaw.integerValue + 5];
 			break;
 		default:
 			break;

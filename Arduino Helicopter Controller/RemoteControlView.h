@@ -9,6 +9,6 @@
 #import <Cocoa/Cocoa.h>
 
 @interface RemoteControlView : NSView {
-	IBOutlet NSSlider *throttle, *trim;
+	IBOutlet NSSlider *throttle, *trim, *yaw, *pitch;
 }
 @end

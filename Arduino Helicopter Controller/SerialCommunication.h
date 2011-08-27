@@ -25,6 +25,6 @@
 + (SerialCommunication *) sharedSerialConnection;
 - (NSMutableArray *) getSerialPortList;
 - (NSString *) openSerialPort: (NSString *)serialPortFile baud: (speed_t)baudRate;
-- (void) writeByte: (int)val;
+- (void) writePacket: (NSString*)packet;
 - (long) readByte;
 @end

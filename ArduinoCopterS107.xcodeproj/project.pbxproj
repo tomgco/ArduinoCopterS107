@@ -10,6 +10,8 @@
 		E22EF9DA1408257700D6D70C /* RemoteControl.m in Sources */ = {isa = PBXBuildFile; fileRef = E22EF9D81408257700D6D70C /* RemoteControl.m */; };
 		E22EF9DB1408257700D6D70C /* RemoteControl.xib in Resources */ = {isa = PBXBuildFile; fileRef = E22EF9D91408257700D6D70C /* RemoteControl.xib */; };
 		E22EF9E2140827DC00D6D70C /* RemoteControlView.m in Sources */ = {isa = PBXBuildFile; fileRef = E22EF9E1140827DC00D6D70C /* RemoteControlView.m */; };
+		E22EFA1314088C2B00D6D70C /* DDHidLib.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = E22EFA1214088C2B00D6D70C /* DDHidLib.framework */; };
+		E22EFA1414088C8F00D6D70C /* DDHidLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E22EFA1214088C2B00D6D70C /* DDHidLib.framework */; };
 		E28273B41406D33100CD749E /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E28273B31406D33100CD749E /* Cocoa.framework */; };
 		E28273BE1406D33100CD749E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E28273BC1406D33100CD749E /* InfoPlist.strings */; };
 		E28273C01406D33100CD749E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E28273BF1406D33100CD749E /* main.m */; };
@@ -20,12 +22,26 @@
 		E28273DC140703DA00CD749E /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E28273DB140703D900CD749E /* IOKit.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		E22EFA0D14088B2700D6D70C /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 12;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				E22EFA1314088C2B00D6D70C /* DDHidLib.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		E22EF9D71408257700D6D70C /* RemoteControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RemoteControl.h; sourceTree = "<group>"; };
 		E22EF9D81408257700D6D70C /* RemoteControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RemoteControl.m; sourceTree = "<group>"; };
 		E22EF9D91408257700D6D70C /* RemoteControl.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RemoteControl.xib; sourceTree = "<group>"; };
 		E22EF9E0140827DC00D6D70C /* RemoteControlView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RemoteControlView.h; sourceTree = "<group>"; };
 		E22EF9E1140827DC00D6D70C /* RemoteControlView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RemoteControlView.m; sourceTree = "<group>"; };
+		E22EFA1214088C2B00D6D70C /* DDHidLib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = DDHidLib.framework; sourceTree = "<group>"; };
 		E28273AF1406D33100CD749E /* ArduinoCopterS107.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ArduinoCopterS107.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E28273B31406D33100CD749E /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		E28273B61406D33100CD749E /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -49,6 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E22EFA1414088C8F00D6D70C /* DDHidLib.framework in Frameworks */,
 				E28273DC140703DA00CD749E /* IOKit.framework in Frameworks */,
 				E28273B41406D33100CD749E /* Cocoa.framework in Frameworks */,
 			);
@@ -60,7 +77,7 @@
 		E28273A41406D33000CD749E = {
 			isa = PBXGroup;
 			children = (
-				E28273DB140703D900CD749E /* IOKit.framework */,
+				E22EFA1214088C2B00D6D70C /* DDHidLib.framework */,
 				E28273B91406D33100CD749E /* ArduinoCopterS107 */,
 				E28273B21406D33100CD749E /* Frameworks */,
 				E28273B01406D33100CD749E /* Products */,
@@ -78,6 +95,7 @@
 		E28273B21406D33100CD749E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E28273DB140703D900CD749E /* IOKit.framework */,
 				E28273B31406D33100CD749E /* Cocoa.framework */,
 				E28273B51406D33100CD749E /* Other Frameworks */,
 			);
@@ -135,6 +153,7 @@
 				E28273AB1406D33000CD749E /* Sources */,
 				E28273AC1406D33000CD749E /* Frameworks */,
 				E28273AD1406D33000CD749E /* Resources */,
+				E22EFA0D14088B2700D6D70C /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -279,6 +298,12 @@
 		E28273CE1406D33100CD749E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../../../Library/Developer/Xcode/DerivedData/DDHidLib-cpzqdsvmeabpiqcokpwmmyabkowu/Build/Products/Debug\"",
+					"\"$(SRCROOT)/Frameworks\"",
+					"\"$(SRCROOT)\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Arduino Helicopter Controller/ArduinoCopterS107-Prefix.pch";
 				INFOPLIST_FILE = "Arduino Helicopter Controller/ArduinoCopterS107-Info.plist";
@@ -292,6 +317,12 @@
 		E28273CF1406D33100CD749E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../../../Library/Developer/Xcode/DerivedData/DDHidLib-cpzqdsvmeabpiqcokpwmmyabkowu/Build/Products/Debug\"",
+					"\"$(SRCROOT)/Frameworks\"",
+					"\"$(SRCROOT)\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Arduino Helicopter Controller/ArduinoCopterS107-Prefix.pch";
 				INFOPLIST_FILE = "Arduino Helicopter Controller/ArduinoCopterS107-Info.plist";

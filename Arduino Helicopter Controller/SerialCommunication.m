@@ -66,9 +66,10 @@ static SerialCommunication *_sharedSerialConnection = nil;
 	return serialPorts;
 }
 
-- (void) writeByte: (int)val {
+- (void) writePacket: (NSString*)packet {
 	if(serialFileDescriptor != -1) {
-		write(serialFileDescriptor, &val, 1);
+		const char *cString = [packet UTF8String];
+		write(serialFileDescriptor, cString, 6);
 	} else {
 		NSLog(@"no Serial Port");
 	}
@@ -76,7 +77,7 @@ static SerialCommunication *_sharedSerialConnection = nil;
 
 - (long) readByte {
 	if(serialFileDescriptor != -1) {
-		char buff[] = "";
+		char buff[1];
 		return read(serialFileDescriptor, &buff, 1);
 	}
 	

@@ -8,6 +8,7 @@
 
 #import "ArduinoCopterS107.h"
 
+
 @implementation ArduinoCopterS107
 
 @synthesize window = _window,
@@ -24,6 +25,9 @@
 		[self updateSerialPortsInMenu:@"usbmodem"];
 	else 
 		[self updateSerialPortsInMenu:@""];
+	
+
+	
 }
 
 - (void) updateSerialPortsInMenu: (NSString *) selectedItem {
@@ -42,7 +46,7 @@
 - (void) openSerialConnection: (NSString *)location {
 	
 	[[serialPortsMenuList itemWithTitle:location] setState:NSOnState];
-	[serialCommunication openSerialPort:location baud:9600];
+	[serialCommunication openSerialPort:location baud:300];
 }
 
 - (IBAction)openChosenSerialConnection:(id)sender {
