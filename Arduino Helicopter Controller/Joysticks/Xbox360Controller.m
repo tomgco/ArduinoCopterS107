@@ -10,7 +10,36 @@
 // This will work on lion.
 
 #import "Xbox360Controller.h"
-
 @implementation Xbox360Controller
+
+@synthesize delegate;
+
+- (id)init {
+	self = [super init];
+	if (self) {
+		delegate = [self delegate];
+	}
+	return self;
+}
+
+- (void) ddhidJoystick: (DDHidJoystick *) joystick
+								 stick: (unsigned) stick
+						 otherAxis: (unsigned) otherAxis
+					valueChanged: (int) value {
+	// Somehow display values here
+	//NSLog(@"Stick: %d, other axis: %d, changed: %d", stick, otherAxis, value);
+	switch(stick) {
+		case 2:	// Triggers
+			switch (otherAxis) {
+				case 1: //right
+					
+					break;
+				case 0: //left
+					break;
+			}
+			break;
+	}
+	
+}
 
 @end

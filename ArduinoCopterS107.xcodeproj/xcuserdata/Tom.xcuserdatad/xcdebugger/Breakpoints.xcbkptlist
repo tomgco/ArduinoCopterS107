@@ -9,23 +9,13 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "Arduino Helicopter Controller/RemoteControl.m"
-         timestampString = "336106412.69061"
+         timestampString = "336161218.133733"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "197"
-         endingLineNumber = "197">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "No"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         isPathRelative = "1"
-         filePath = "Arduino Helicopter Controller/RemoteControl.m"
-         timestampString = "336106412.69061"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "76"
-         endingLineNumber = "76">
+         startingLineNumber = "62"
+         endingLineNumber = "62"
+         landmarkName = "-initWithNibName:bundle:"
+         landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
          shouldBeEnabled = "No"
@@ -75,11 +65,13 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "Arduino Helicopter Controller/RemoteControl.m"
-         timestampString = "336106412.69061"
+         timestampString = "336161218.133733"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "77"
-         endingLineNumber = "77">
+         startingLineNumber = "63"
+         endingLineNumber = "63"
+         landmarkName = "-initWithNibName:bundle:"
+         landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
          shouldBeEnabled = "No"
@@ -87,95 +79,13 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "Arduino Helicopter Controller/RemoteControl.m"
-         timestampString = "336106412.69061"
+         timestampString = "336161218.133733"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "123"
-         endingLineNumber = "123">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "No"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         isPathRelative = "1"
-         filePath = "Arduino Helicopter Controller/RemoteControl.m"
-         timestampString = "336106412.69061"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "122"
-         endingLineNumber = "122">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "Yes"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         isPathRelative = "1"
-         filePath = "Arduino Helicopter Controller/RemoteControl.m"
-         timestampString = "336104771.228905"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "40"
-         endingLineNumber = "40">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "No"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         isPathRelative = "1"
-         filePath = "Arduino Helicopter Controller/RemoteControl.m"
-         timestampString = "336106412.69061"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "195"
-         endingLineNumber = "195">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "No"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         isPathRelative = "1"
-         filePath = "Arduino Helicopter Controller/RemoteControl.m"
-         timestampString = "336106412.69061"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "188"
-         endingLineNumber = "188">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "No"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         isPathRelative = "1"
-         filePath = "Arduino Helicopter Controller/RemoteControl.m"
-         timestampString = "336106412.69061"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "144"
-         endingLineNumber = "144">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "No"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         isPathRelative = "1"
-         filePath = "Arduino Helicopter Controller/RemoteControl.m"
-         timestampString = "336106412.69061"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "153"
-         endingLineNumber = "153">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "No"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         isPathRelative = "1"
-         filePath = "Arduino Helicopter Controller/RemoteControl.m"
-         timestampString = "336106412.69061"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "59"
-         endingLineNumber = "59">
+         startingLineNumber = "45"
+         endingLineNumber = "45"
+         landmarkName = "-initWithNibName:bundle:"
+         landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>
 </Bucket>

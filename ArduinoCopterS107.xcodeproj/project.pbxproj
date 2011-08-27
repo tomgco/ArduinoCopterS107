@@ -13,7 +13,7 @@
 		E22EFA1314088C2B00D6D70C /* DDHidLib.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = E22EFA1214088C2B00D6D70C /* DDHidLib.framework */; };
 		E22EFA1414088C8F00D6D70C /* DDHidLib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E22EFA1214088C2B00D6D70C /* DDHidLib.framework */; };
 		E25D70DF1409558400A79FDD /* Xbox360Controller.m in Sources */ = {isa = PBXBuildFile; fileRef = E25D70DE1409558400A79FDD /* Xbox360Controller.m */; };
-		E25D70E21409568800A79FDD /* Controller.m in Sources */ = {isa = PBXBuildFile; fileRef = E25D70E11409568800A79FDD /* Controller.m */; };
+		E25D70E21409568800A79FDD /* RCController.m in Sources */ = {isa = PBXBuildFile; fileRef = E25D70E11409568800A79FDD /* RCController.m */; };
 		E28273B41406D33100CD749E /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E28273B31406D33100CD749E /* Cocoa.framework */; };
 		E28273BE1406D33100CD749E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E28273BC1406D33100CD749E /* InfoPlist.strings */; };
 		E28273C01406D33100CD749E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E28273BF1406D33100CD749E /* main.m */; };
@@ -46,8 +46,8 @@
 		E22EFA1214088C2B00D6D70C /* DDHidLib.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = DDHidLib.framework; sourceTree = "<group>"; };
 		E25D70DD1409558400A79FDD /* Xbox360Controller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Xbox360Controller.h; path = "Arduino Helicopter Controller/Joysticks/Xbox360Controller.h"; sourceTree = "<group>"; };
 		E25D70DE1409558400A79FDD /* Xbox360Controller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Xbox360Controller.m; path = "Arduino Helicopter Controller/Joysticks/Xbox360Controller.m"; sourceTree = "<group>"; };
-		E25D70E01409568800A79FDD /* Controller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Controller.h; path = "Arduino Helicopter Controller/Joysticks/Controller.h"; sourceTree = "<group>"; };
-		E25D70E11409568800A79FDD /* Controller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Controller.m; path = "Arduino Helicopter Controller/Joysticks/Controller.m"; sourceTree = "<group>"; };
+		E25D70E01409568800A79FDD /* RCController.h */ = {isa = PBXFileReference; fileEncoding = 4; name = RCController.h; path = "Arduino Helicopter Controller/Joysticks/RCController.h"; sourceTree = "<group>"; };
+		E25D70E11409568800A79FDD /* RCController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RCController.m; path = "Arduino Helicopter Controller/Joysticks/RCController.m"; sourceTree = "<group>"; };
 		E28273AF1406D33100CD749E /* ArduinoCopterS107.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ArduinoCopterS107.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E28273B31406D33100CD749E /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		E28273B61406D33100CD749E /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -85,8 +85,8 @@
 			children = (
 				E25D70DD1409558400A79FDD /* Xbox360Controller.h */,
 				E25D70DE1409558400A79FDD /* Xbox360Controller.m */,
-				E25D70E01409568800A79FDD /* Controller.h */,
-				E25D70E11409568800A79FDD /* Controller.m */,
+				E25D70E01409568800A79FDD /* RCController.h */,
+				E25D70E11409568800A79FDD /* RCController.m */,
 			);
 			name = Joysticks;
 			sourceTree = "<group>";
@@ -232,7 +232,7 @@
 				E22EF9DA1408257700D6D70C /* RemoteControl.m in Sources */,
 				E22EF9E2140827DC00D6D70C /* RemoteControlView.m in Sources */,
 				E25D70DF1409558400A79FDD /* Xbox360Controller.m in Sources */,
-				E25D70E21409568800A79FDD /* Controller.m in Sources */,
+				E25D70E21409568800A79FDD /* RCController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
