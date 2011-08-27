@@ -59,9 +59,7 @@
 							<int key="NSCellFlags2">0</int>
 							<string key="NSCellIdentifier">_NS:2154</string>
 							<reference key="NSControlView" ref="356573298"/>
-							<double key="NSValue">-65536</double>
-							<double key="NSMinValue">-65536</double>
-							<double key="NSMaxValue">65536</double>
+							<double key="NSMaxValue">127</double>
 							<double key="NSWarningValue">2</double>
 							<double key="NSCriticalValue">2</double>
 							<int key="NSIndicatorStyle">1</int>
@@ -82,7 +80,7 @@
 							<string key="NSContents"/>
 							<string key="NSCellIdentifier">_NS:726</string>
 							<reference key="NSControlView" ref="1006953700"/>
-							<double key="NSMaxValue">126</double>
+							<double key="NSMaxValue">127</double>
 							<double key="NSMinValue">0.0</double>
 							<double key="NSValue">63</double>
 							<double key="NSAltIncValue">0.0</double>
@@ -225,9 +223,9 @@
 							<string key="NSContents"/>
 							<string key="NSCellIdentifier">_NS:3968</string>
 							<reference key="NSControlView" ref="368357058"/>
-							<double key="NSMaxValue">254</double>
+							<double key="NSMaxValue">127</double>
 							<double key="NSMinValue">0.0</double>
-							<double key="NSValue">0.0</double>
+							<double key="NSValue">63</double>
 							<double key="NSAltIncValue">0.0</double>
 							<int key="NSNumberOfTickMarks">0</int>
 							<int key="NSTickMarkPosition">1</int>
@@ -251,7 +249,7 @@
 							<string key="NSContents"/>
 							<string key="NSCellIdentifier">_NS:40</string>
 							<reference key="NSControlView" ref="488946544"/>
-							<double key="NSMaxValue">126</double>
+							<double key="NSMaxValue">127</double>
 							<double key="NSMinValue">0.0</double>
 							<double key="NSValue">63</double>
 							<double key="NSAltIncValue">0.0</double>
@@ -276,7 +274,7 @@
 							<string key="NSContents"/>
 							<string key="NSCellIdentifier">_NS:40</string>
 							<reference key="NSControlView" ref="183467365"/>
-							<double key="NSMaxValue">125</double>
+							<double key="NSMaxValue">127</double>
 							<double key="NSMinValue">0.0</double>
 							<double key="NSValue">0.0</double>
 							<double key="NSAltIncValue">0.0</double>
@@ -605,7 +603,6 @@
 					<dictionary class="NSMutableDictionary" key="outlets">
 						<string key="channelSelect">NSSegmentedControl</string>
 						<string key="connect">NSButton</string>
-						<string key="mJoysticksController">NSArrayController</string>
 						<string key="pitch">NSSlider</string>
 						<string key="throttle">NSSlider</string>
 						<string key="throttleJoystick">NSLevelIndicator</string>
@@ -620,10 +617,6 @@
 						<object class="IBToOneOutletInfo" key="connect">
 							<string key="name">connect</string>
 							<string key="candidateClassName">NSButton</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="mJoysticksController">
-							<string key="name">mJoysticksController</string>
-							<string key="candidateClassName">NSArrayController</string>
 						</object>
 						<object class="IBToOneOutletInfo" key="pitch">
 							<string key="name">pitch</string>

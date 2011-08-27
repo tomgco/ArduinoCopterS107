@@ -61,7 +61,24 @@
 }			
 
 - (void) RCTriggerRT:(DDHidJoystick *)joystick valueChanged:(NSNumber *)value {
-	NSLog(@"%@", value);
+	// To use for Throttle;
+	[throttleJoystick setIntValue:([value intValue] + MAX_POSITION_ON_AXIS_XBOX) / MAX_POSITION_ON_AXIS_XBOX_STEP];
+}
+
+- (void) RCRightJoystickX:(DDHidJoystick *)joystick valueChanged:(NSNumber *)value {
+	[yaw setIntValue:([value intValue] + MAX_POSITION_ON_AXIS_XBOX) / MAX_POSITION_ON_AXIS_XBOX_STEP];
+}
+
+- (void) RCRightJoystickY:(DDHidJoystick *)joystick valueChanged:(NSNumber *)value {
+	[pitch setIntValue:([value intValue] + MAX_POSITION_ON_AXIS_XBOX) / MAX_POSITION_ON_AXIS_XBOX_STEP];
+}
+
+- (void) RCButtonLB:(DDHidJoystick *)joystick state:(BOOL)pressed {
+	[trim setIntValue: [trim intValue] + 1];
+}
+
+- (void) RCButtonRB:(DDHidJoystick *)joystick state:(BOOL)pressed {
+	[trim setIntValue: [trim intValue] -1];
 }
 
 @end

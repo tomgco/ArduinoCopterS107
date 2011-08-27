@@ -5,3 +5,5 @@
 #ifdef __OBJC__
 	#import <Cocoa/Cocoa.h>
 #endif
+#define MAX_POSITION_ON_AXIS_XBOX 65536
+#define MAX_POSITION_ON_AXIS_XBOX_STEP 1032
