@@ -37,7 +37,7 @@
 	dispatch_time_t now = dispatch_walltime(DISPATCH_TIME_NOW, 0);
 	dispatch_source_set_timer(timer, now, 125ull * NSEC_PER_MSEC, 5000ull);
 	dispatch_source_set_event_handler(timer, ^{
-		[self sendPacket:CHANNEL1 yaw:[yaw intValue] pitch:[pitch intValue] throttle:([throttleJoystick intValue] + 65536) / 1032 trimAdjust:[trim intValue]];
+		[self sendPacket:CHANNEL1 yaw:[yaw intValue] pitch:[pitch intValue] throttle:[throttleJoystick intValue] trimAdjust:[trim intValue]];
 	});
 	
 	
@@ -55,7 +55,7 @@
 
 - (void) sendPacket:(int)channel yaw:(int)y pitch:(int)p throttle:(int)t trimAdjust:(int)trimAdjust {
 	int throttleWithChannel = (channel == CHANNEL1) ? t : (t + 128);
-	NSString *packet = [[NSString alloc] initWithFormat:@"%c%c%c%c%c%c", 0x4C, 0x4F, y, p, throttleWithChannel + 1, trimAdjust];
+	NSString *packet = [[NSString alloc] initWithFormat:@"%c%c%c%c%c%c", 0x4C, 0x4F, y, p, throttleWithChannel, trimAdjust];
 	
 	[serialCommunication writePacket:packet];
 }			
