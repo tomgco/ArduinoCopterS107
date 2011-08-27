@@ -48,7 +48,16 @@
 						 otherAxis: (unsigned) otherAxis
 					valueChanged: (int) value {	
 	NSNumber *changedValue = [NSNumber numberWithInt:value];
-	[self handleTriggerPress:joystick axis:otherAxis value:changedValue];
+	switch (stick) {
+		case 1: //
+			[self handleRightAnalogStickMovement:joystick axis:otherAxis value:changedValue];
+			break;
+		case 2: // Triggers
+			[self handleTriggerPress:joystick axis:otherAxis value:changedValue];
+			break;
+		default:
+			break;
+	}
 }
 
 - (void) ddhidJoystick: (DDHidJoystick *) joystick
@@ -73,13 +82,31 @@
 
 - (void)handleTriggerPress:(DDHidJoystick *)joystick axis:(unsigned int)axis value:(NSNumber *)value {
 	SEL selectorTobeCalled;
-	
 	switch (axis) {
 		case 1: //right
 			selectorTobeCalled = @selector(RCTriggerRT:valueChanged:);
 			break;
 		case 0: //left
 			selectorTobeCalled = @selector(RCTriggerLT:valueChanged:);
+			break;
+	}
+	
+	if ([delegate respondsToSelector:selectorTobeCalled]) {
+		// ARC doesn't like this, Their will be an override at some point but
+		// as I have got this wrapped nothing bad "should|" happen :P
+		
+		[delegate performSelector:selectorTobeCalled withObject:joystick withObject:value];
+	}
+}
+
+- (void) handleRightAnalogStickMovement:(DDHidJoystick *)joystick axis:(unsigned int)axis value:(NSNumber *)value {
+	SEL selectorTobeCalled;
+	switch (axis) {
+		case 1: // Y
+			selectorTobeCalled = @selector(RCRightJoystickY:valueChanged:);
+			break;
+		case 0: // X
+			selectorTobeCalled = @selector(RCRightJoystickX:valueChanged:);
 			break;
 	}
 	

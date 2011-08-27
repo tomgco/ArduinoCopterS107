@@ -51,4 +51,5 @@
 
 - (void) handleButtonPress: (DDHidJoystick *) joystick buttonNumber:(unsigned) number state: (BOOL) pressed;
 - (void) handleTriggerPress: (DDHidJoystick *) joystick axis:(unsigned) axis value:(NSNumber *) value;
+- (void) handleRightAnalogStickMovement: (DDHidJoystick *) joystick axis:(unsigned) axis value:(NSNumber *) value;
 @end
