@@ -10,7 +10,7 @@
 #import "SerialCommunication.h"
 #import "Xbox360Controller.h"
 
-@interface RemoteControl : NSViewController {
+@interface RemoteControl : NSViewController <XboxControllerDelegate> {
 	SerialCommunication *serialCommunication;
 	IBOutlet NSSlider *throttle, *trim, *yaw, *pitch;
 	NSSegmentedControl *channelSelect;

@@ -10,33 +10,36 @@
 #import "RCController.h"
 
 @protocol XboxControllerDelegate <NSObject>
-	@optional
-	- (void) RCButtonA;
-	- (void) RCButtonB;
-	- (void) RCButtonX;
-	- (void) RCButtonY;
-	- (void) RCButtonY;
+@optional
+- (void) RCButtonA: (DDHidJoystick *) joystick state: (BOOL)pressed;
+- (void) RCButtonB: (DDHidJoystick *) joystick state: (BOOL)pressed;
+- (void) RCButtonX: (DDHidJoystick *) joystick state: (BOOL)pressed;
+- (void) RCButtonY: (DDHidJoystick *) joystick state: (BOOL)pressed;
+- (void) RCButtonY: (DDHidJoystick *) joystick state: (BOOL)pressed;
 
-	- (void) RCButtonLeftAnalogStick;
-	- (void) RCButtonRightAnalogStick;
+- (void) RCButtonLeftAnalogStick: (DDHidJoystick *) joystick state: (BOOL)pressed;
+- (void) RCButtonRightAnalogStick: (DDHidJoystick *) joystick state: (BOOL)pressed;
 
-	- (void) RCButtonDPadUp;
-	- (void) RCButtonDPadDown;
-	- (void) RCButtonDPadLeft;
-	- (void) RCButtonDPadRight;
+- (void) RCButtonDPadUp: (DDHidJoystick *) joystick state: (BOOL)pressed;
+- (void) RCButtonDPadDown: (DDHidJoystick *) joystick state: (BOOL)pressed;
+- (void) RCButtonDPadLeft: (DDHidJoystick *) joystick state: (BOOL)pressed;
+- (void) RCButtonDPadRight: (DDHidJoystick *) joystick state: (BOOL)pressed;
 
-	- (void) RCButtonRB;
-	- (void) RCButtonLB;
+- (void) RCButtonRB: (DDHidJoystick *) joystick state: (BOOL)pressed;
+- (void) RCButtonLB: (DDHidJoystick *) joystick state: (BOOL)pressed;
 
-	- (void) RCButtonStart;
-	- (void) RCButtonBack;
-	- (void) RCButtonGuide;
+- (void) RCButtonStart: (DDHidJoystick *) joystick state: (BOOL)pressed;
+- (void) RCButtonBack: (DDHidJoystick *) joystick state: (BOOL)pressed;
+- (void) RCButtonGuide: (DDHidJoystick *) joystick state: (BOOL)pressed;
 
-	- (void) RCTriggerRT;
-	- (void) RCTriggerLT;
+- (void) RCTriggerRT: (DDHidJoystick *) joystick valueChanged: (int)value;
+- (void) RCTriggerLT: (DDHidJoystick *) joystick valueChanged: (int)value;
 
-	- (void) RCLeftJoystick;
-	- (void) RCLeftJoystick;
+- (void) RCLeftJoystickX: (DDHidJoystick *) joystick valueChanged: (int)value;
+- (void) RCLeftJoystickY: (DDHidJoystick *) joystick valueChanged: (int)value;
+
+- (void) RCRightJoystick: (DDHidJoystick *) joystick valueChanged: (int)value;
+- (void) RCRightJoystick: (DDHidJoystick *) joystick valueChanged: (int)value;
 
 @end
 

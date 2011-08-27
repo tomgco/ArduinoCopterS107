@@ -23,14 +23,11 @@
     if (self) {
         // Initialization code here.
 			controller = [[Xbox360Controller alloc] init];
+			[controller setDelegate:self];
 			serialCommunication = [SerialCommunication sharedSerialConnection];
     }
 		[self startTimer];
     return self;
-}
-
-- (void) awakeFromNib {
-
 }
 
 - (void) startTimer {
@@ -62,6 +59,9 @@
 	
 	[serialCommunication writePacket:packet];
 }
-																		
+
+- (void) RCButtonA {
+	
+}																		
 
 @end
