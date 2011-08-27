@@ -36,3 +36,10 @@ Icon?
 
 # ZSH Cake plugin cache
 /.cake_task_cache
+
+# Xcode
+*xcodeproj/*mode*
+*xcodeproj/*pbxuser
+*xcodeproj/*per*
+*xcodeproj/project.xcworkspace
+*xcodeproj/xcuserdata

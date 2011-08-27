@@ -21,7 +21,8 @@
 
 @end
 
-@synthesize channelSelect;
+@synthesize channelSelect,
+						controller;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -159,7 +160,7 @@ otherAxis: (unsigned) otherAxis
 valueChanged: (int) value;
 {
 	// Somehow display values here
-//	NSLog(@"Stick: %d, other axis: %d, changed: %d", stick, otherAxis, value);
+	NSLog(@"Stick: %d, other axis: %d, changed: %d", stick, otherAxis, value);
 	switch(stick) {
 		case 2:	// Triggers
 			switch (otherAxis) {

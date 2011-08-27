@@ -9,6 +9,7 @@
 #import <Cocoa/Cocoa.h>
 #import "SerialCommunication.h"
 #import <DDHidLib/DDHidLib.h>
+#import "Xbox360Controller.h"
 
 @interface RemoteControl : NSViewController {
 	SerialCommunication *serialCommunication;
@@ -26,9 +27,15 @@
 	NSMutableArray * mJoystickButtons;
 	int mXAxis;
 	int mYAxis;
+	
+	//Loading xbox controller to begin, will have an 
+	//abstraction layer to be able to choose and 
+	//possible a self configuration area when I can be arsed.
+	
+	Xbox360Controller *controller;
 }
 
-
+@property (retain, nonatomic) Xbox360Controller *controller;
 @property (retain, nonatomic) IBOutlet NSSegmentedControl *channelSelect;
 
 - (NSArray *) joysticks;
