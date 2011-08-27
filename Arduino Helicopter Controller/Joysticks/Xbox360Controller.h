@@ -32,14 +32,14 @@
 - (void) RCButtonBack: (DDHidJoystick *) joystick state: (BOOL)pressed;
 - (void) RCButtonGuide: (DDHidJoystick *) joystick state: (BOOL)pressed;
 
-- (void) RCTriggerRT: (DDHidJoystick *) joystick valueChanged: (int)value;
-- (void) RCTriggerLT: (DDHidJoystick *) joystick valueChanged: (int)value;
+- (void) RCTriggerRT: (DDHidJoystick *) joystick valueChanged: (NSNumber *)value;
+- (void) RCTriggerLT: (DDHidJoystick *) joystick valueChanged: (NSNumber *)value;
 
-- (void) RCLeftJoystickX: (DDHidJoystick *) joystick valueChanged: (int)value;
-- (void) RCLeftJoystickY: (DDHidJoystick *) joystick valueChanged: (int)value;
+- (void) RCLeftJoystickX: (DDHidJoystick *) joystick valueChanged: (NSNumber *)value;
+- (void) RCLeftJoystickY: (DDHidJoystick *) joystick valueChanged: (NSNumber *)value;
 
-- (void) RCRightJoystick: (DDHidJoystick *) joystick valueChanged: (int)value;
-- (void) RCRightJoystick: (DDHidJoystick *) joystick valueChanged: (int)value;
+- (void) RCRightJoystickX: (DDHidJoystick *) joystick valueChanged: (NSNumber *)value;
+- (void) RCRightJoystickY: (DDHidJoystick *) joystick valueChanged: (NSNumber *)value;
 
 @end
 
@@ -49,4 +49,6 @@
 
 @property (retain) id <XboxControllerDelegate> delegate;
 
+- (void) handleButtonPress: (DDHidJoystick *) joystick buttonNumber:(unsigned) number state: (BOOL) pressed;
+- (void) handleTriggerPress: (DDHidJoystick *) joystick axis:(unsigned) axis value:(NSNumber *) value;
 @end

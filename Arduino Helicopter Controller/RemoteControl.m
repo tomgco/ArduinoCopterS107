@@ -58,10 +58,10 @@
 	NSString *packet = [[NSString alloc] initWithFormat:@"%c%c%c%c%c%c", 0x4C, 0x4F, y, p, throttleWithChannel + 1, trimAdjust];
 	
 	[serialCommunication writePacket:packet];
-}
+}			
 
-- (void) RCButtonA {
-	
-}																		
+- (void) RCTriggerRT:(DDHidJoystick *)joystick valueChanged:(NSNumber *)value {
+	NSLog(@"%@", value);
+}
 
 @end

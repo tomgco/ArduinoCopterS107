@@ -9,6 +9,9 @@
 // This will control the Xbox 360 Controller on the mac using the driver found at http://tattiebogle.net/index.php/ProjectRoot/Xbox360Controller/OsxDriver
 // This will work on lion.
 
+#define PRESSED (BOOL)YES
+#define UNPRESSED (BOOL)YES
+
 #import "Xbox360Controller.h"
 @implementation Xbox360Controller
 
@@ -26,7 +29,8 @@
 								 stick: (unsigned) stick
 							xChanged: (int) value {
 	if ([delegate respondsToSelector:@selector(RCLeftJoystickX:valueChanged:)]) {
-		[delegate RCLeftJoystickX:joystick valueChanged:value];
+		NSNumber *changedValue = [NSNumber numberWithInt:value];
+		[delegate RCLeftJoystickX:joystick valueChanged:changedValue];
 	}
 }
 
@@ -34,36 +38,17 @@
 								 stick: (unsigned) stick
 							yChanged: (int) value {
 	if ([delegate respondsToSelector:@selector(RCLeftJoystickY:valueChanged:)]) {
-		[delegate RCLeftJoystickY:joystick valueChanged:value];
+		NSNumber *changedValue = [NSNumber numberWithInt:value];
+		[delegate RCLeftJoystickY:joystick valueChanged:changedValue];
 	}
 }
 
 - (void) ddhidJoystick: (DDHidJoystick *) joystick
 								 stick: (unsigned) stick
 						 otherAxis: (unsigned) otherAxis
-					valueChanged: (int) value {
-	
-	SEL selectorTobeCalled;
+					valueChanged: (int) value {	
 	NSNumber *changedValue = [NSNumber numberWithInt:value];
-	
-	switch(stick) {
-		case 2:	// Triggers
-			switch (otherAxis) {
-				case 1: //right
-					selectorTobeCalled = @selector(RCTriggerRT:valueChanged:);
-					break;
-				case 0: //left
-					break;
-			}
-			break;
-	}
-	
-	if ([delegate respondsToSelector:selectorTobeCalled]) {
-		// ARC doesn't like this, Their will be an override at some point but
-		// as I have got this wrapped nothing bad "should|" happen :P
-		
-		[delegate performSelector:selectorTobeCalled withObject:joystick withObject:changedValue];
-	}
+	[self handleTriggerPress:joystick axis:otherAxis value:changedValue];
 }
 
 - (void) ddhidJoystick: (DDHidJoystick *) joystick
@@ -77,10 +62,40 @@
 
 - (void) ddhidJoystick: (DDHidJoystick *) joystick
 						buttonDown: (unsigned) buttonNumber {
-	
+	[self handleButtonPress:joystick buttonNumber:buttonNumber state:PRESSED];
+}
+
+- (void) ddhidJoystick: (DDHidJoystick *) joystick
+							buttonUp: (unsigned) buttonNumber;
+{
+	[self handleButtonPress:joystick buttonNumber:buttonNumber state:UNPRESSED];
+}
+
+- (void)handleTriggerPress:(DDHidJoystick *)joystick axis:(unsigned int)axis value:(NSNumber *)value {
 	SEL selectorTobeCalled;
 	
-	switch(buttonNumber) {
+	switch (axis) {
+		case 1: //right
+			selectorTobeCalled = @selector(RCTriggerRT:valueChanged:);
+			break;
+		case 0: //left
+			selectorTobeCalled = @selector(RCTriggerLT:valueChanged:);
+			break;
+	}
+	
+	if ([delegate respondsToSelector:selectorTobeCalled]) {
+		// ARC doesn't like this, Their will be an override at some point but
+		// as I have got this wrapped nothing bad "should|" happen :P
+		
+		[delegate performSelector:selectorTobeCalled withObject:joystick withObject:value];
+	}
+}
+
+- (void) handleButtonPress:(DDHidJoystick *)joystick buttonNumber:(unsigned int)number state:(BOOL)pressed {
+	NSNumber *pressedNumber = [NSNumber numberWithBool:pressed];
+	SEL selectorTobeCalled;
+	
+	switch(number) {
 		case 0: // A
 			selectorTobeCalled = @selector(RCButtonA:state:);
 			break;
@@ -132,15 +147,8 @@
 		// ARC doesn't like this, Their will be an override at some point but
 		// as I have got this wrapped nothing bad "should|" happen :P
 		
-		[delegate performSelector:selectorTobeCalled withObject:joystick withObject:YES];
+		[delegate performSelector:selectorTobeCalled withObject:joystick withObject:pressedNumber];
 	}
-}
-
-- (void) ddhidJoystick: (DDHidJoystick *) joystick
-							buttonUp: (unsigned) buttonNumber;
-{
-	//	ButtonState * state = [mJoystickButtons objectAtIndex: buttonNumber];
-	//	[state setPressed: NO];
 }
 
 @end
