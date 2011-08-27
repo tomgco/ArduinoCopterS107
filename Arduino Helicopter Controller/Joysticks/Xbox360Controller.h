@@ -43,7 +43,7 @@
 
 @end
 
-@interface Xbox360Controller : RCController {
+@interface Xbox360Controller : RCController <RCController> {
 	id <XboxControllerDelegate> delegate;
 }
 

@@ -61,7 +61,7 @@
 }			
 
 - (void) RCTriggerRT:(DDHidJoystick *)joystick valueChanged:(NSNumber *)value {
-//	NSLog(@"%@", value);
+	NSLog(@"%@", value);
 }
 
 @end

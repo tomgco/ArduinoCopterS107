@@ -9,6 +9,28 @@
 #import <Foundation/Foundation.h>
 #import <DDHidLib/DDHidLib.h>
 
+@protocol RCController <NSObject>
+@optional
+- (void) ddhidJoystick: (DDHidJoystick *)  joystick
+                 stick: (unsigned) stick
+              xChanged: (int) value;
+
+- (void) ddhidJoystick: (DDHidJoystick *)  joystick
+                 stick: (unsigned) stick
+              yChanged: (int) value;
+
+- (void) ddhidJoystick: (DDHidJoystick *) joystick
+                 stick: (unsigned) stick
+             otherAxis: (unsigned) otherAxis
+          valueChanged: (int) value;
+
+- (void) ddhidJoystick: (DDHidJoystick *) joystick
+            buttonDown: (unsigned) buttonNumber;
+
+- (void) ddhidJoystick: (DDHidJoystick *) joystick
+              buttonUp: (unsigned) buttonNumber;
+@end
+
 @interface RCController : NSObject {
 	//Joystick Shit - Haven't got a clue yet.
 	IBOutlet NSArrayController * mJoysticksController;
@@ -34,24 +56,5 @@
 
 - (int) xAxis;
 - (int) yAxis;
-
-- (void) ddhidJoystick: (DDHidJoystick *)  joystick
-                 stick: (unsigned) stick
-              xChanged: (int) value;
-
-- (void) ddhidJoystick: (DDHidJoystick *)  joystick
-                 stick: (unsigned) stick
-              yChanged: (int) value;
-
-- (void) ddhidJoystick: (DDHidJoystick *) joystick
-                 stick: (unsigned) stick
-             otherAxis: (unsigned) otherAxis
-          valueChanged: (int) value;
-
-- (void) ddhidJoystick: (DDHidJoystick *) joystick
-            buttonDown: (unsigned) buttonNumber;
-
-- (void) ddhidJoystick: (DDHidJoystick *) joystick
-              buttonUp: (unsigned) buttonNumber;
 
 @end

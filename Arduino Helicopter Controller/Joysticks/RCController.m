@@ -93,67 +93,6 @@
 	return mYAxis;
 }
 
-- (void) ddhidJoystick: (DDHidJoystick *)  joystick
-								 stick: (unsigned) stick
-							xChanged: (int) value;
-{
-	[self willChangeValueForKey: @"xAxis"];
-	mXAxis = value;
-	[self didChangeValueForKey: @"xAxis"];
-}
-
-- (void) ddhidJoystick: (DDHidJoystick *)  joystick
-								 stick: (unsigned) stick
-							yChanged: (int) value;
-{
-	[self willChangeValueForKey: @"yAxis"];
-	mYAxis = value;
-	[self didChangeValueForKey: @"yAxis"];
-}
-
-- (void) ddhidJoystick: (DDHidJoystick *) joystick
-								 stick: (unsigned) stick
-						 otherAxis: (unsigned) otherAxis
-					valueChanged: (int) value;
-{
-	// Somehow display values here
-	NSLog(@"Stick: %d, other axis: %d, changed: %d", stick, otherAxis, value);
-	switch(stick) {
-		case 2:	// Triggers
-			switch (otherAxis) {
-				case 1: //right
-					
-					break;
-				case 0: //left
-					break;
-			}
-			break;
-	}
-}
-
-- (void) ddhidJoystick: (DDHidJoystick *) joystick
-								 stick: (unsigned) stick
-						 povNumber: (unsigned) povNumber
-					valueChanged: (int) value;
-{
-	// Somehow display values here
-	//	NSLog(@"Stick: %d, POV number: %d, changed: %d", stick, povNumber, value);
-}
-
-- (void) ddhidJoystick: (DDHidJoystick *) joystick
-						buttonDown: (unsigned) buttonNumber;
-{
-	//	ButtonState * state = [mJoystickButtons objectAtIndex: buttonNumber];
-	//	[state setPressed: YES];
-}
-
-- (void) ddhidJoystick: (DDHidJoystick *) joystick
-							buttonUp: (unsigned) buttonNumber;
-{
-	//	ButtonState * state = [mJoystickButtons objectAtIndex: buttonNumber];
-	//	[state setPressed: NO];
-}
-
 @end
 
 @implementation RCController (Private)
