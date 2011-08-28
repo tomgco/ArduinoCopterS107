@@ -71,7 +71,7 @@
 }
 
 - (void) RCRightJoystickX:(DDHidJoystick *)joystick valueChanged:(NSNumber *)value {
-	[yaw setIntValue:([value intValue] + MAX_POSITION_ON_AXIS_XBOX) / MAX_POSITION_ON_AXIS_XBOX_STEP];
+	[yaw setIntValue:((~[value intValue]) + MAX_POSITION_ON_AXIS_XBOX) / MAX_POSITION_ON_AXIS_XBOX_STEP];
 }
 
 - (void) RCRightJoystickY:(DDHidJoystick *)joystick valueChanged:(NSNumber *)value {
