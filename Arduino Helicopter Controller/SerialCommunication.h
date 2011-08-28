@@ -16,8 +16,8 @@
 #include <sys/ioctl.h>
 
 @interface SerialCommunication : NSObject {
+	@private
 	NSMutableArray *serialPorts;
-	
 	// Serial Port stuff
 	int serialFileDescriptor; // file handle to the serial port
 	struct termios gOriginalTTYAttrs; // Hold the original termios attributes so we can reset them on quit ( best practice )
@@ -27,4 +27,5 @@
 - (NSString *) openSerialPort: (NSString *)serialPortFile baud: (speed_t)baudRate;
 - (void) writePacket: (NSString*)packet;
 - (long) readByte;
+- (int) isConnected;
 @end

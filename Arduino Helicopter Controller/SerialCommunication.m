@@ -90,7 +90,7 @@ static SerialCommunication *_sharedSerialConnection = nil;
 //   - nil is returned on success
 //   - an error message is returned otherwise
 - (NSString *) openSerialPort: (NSString *)serialPortFile baud: (speed_t)baudRate {
-	int success;
+	int connectionSuccess;
 	
 	// close the port if it is already open
 	if (serialFileDescriptor != -1) {
@@ -122,18 +122,18 @@ static SerialCommunication *_sharedSerialConnection = nil;
 		errorMessage = @"Error: couldn't open serial port";
 	} else {
 		// TIOCEXCL causes blocking of non-root processes on this serial-port
-		success = ioctl(serialFileDescriptor, TIOCEXCL);
-		if ( success == -1) { 
+		connectionSuccess = ioctl(serialFileDescriptor, TIOCEXCL);
+		if ( connectionSuccess == -1) { 
 			errorMessage = @"Error: couldn't obtain lock on serial port";
 		} else {
-			success = fcntl(serialFileDescriptor, F_SETFL, 0);
-			if ( success == -1) { 
+			connectionSuccess = fcntl(serialFileDescriptor, F_SETFL, 0);
+			if ( connectionSuccess == -1) { 
 				// clear the O_NONBLOCK flag; all calls from here on out are blocking for non-root processes
 				errorMessage = @"Error: couldn't obtain lock on serial port";
 			} else {
 				// Get the current options and save them so we can restore the default settings later.
-				success = tcgetattr(serialFileDescriptor, &gOriginalTTYAttrs);
-				if ( success == -1) { 
+				connectionSuccess = tcgetattr(serialFileDescriptor, &gOriginalTTYAttrs);
+				if ( connectionSuccess == -1) { 
 					errorMessage = @"Error: couldn't get serial attributes";
 				} else {
 					// copy the old termios settings into the current
@@ -151,18 +151,18 @@ static SerialCommunication *_sharedSerialConnection = nil;
 					cfmakeraw(&options);
 					
 					// set tty attributes (raw-mode in this case)
-					success = tcsetattr(serialFileDescriptor, TCSANOW, &options);
-					if ( success == -1) {
+					connectionSuccess = tcsetattr(serialFileDescriptor, TCSANOW, &options);
+					if ( connectionSuccess == -1) {
 						errorMessage = @"Error: coudln't set serial attributes";
 					} else {
 						// Set baud rate (any arbitrary baud rate can be set this way)
-						success = ioctl(serialFileDescriptor, IOSSIOSPEED, &baudRate);
-						if ( success == -1) { 
+						connectionSuccess = ioctl(serialFileDescriptor, IOSSIOSPEED, &baudRate);
+						if ( connectionSuccess == -1) { 
 							errorMessage = @"Error: Baud Rate out of bounds";
 						} else {
 							// Set the receive latency (a.k.a. don't wait to buffer data)
-							success = ioctl(serialFileDescriptor, IOSSDATALAT, &mics);
-							if ( success == -1) { 
+							connectionSuccess = ioctl(serialFileDescriptor, IOSSDATALAT, &mics);
+							if ( connectionSuccess == -1) { 
 								errorMessage = @"Error: coudln't set serial latency";
 							}
 						}

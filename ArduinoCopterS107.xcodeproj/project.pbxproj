@@ -22,6 +22,9 @@
 		E28273CA1406D33100CD749E /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = E28273C81406D33100CD749E /* MainMenu.xib */; };
 		E28273D5140701FE00CD749E /* SerialCommunication.m in Sources */ = {isa = PBXBuildFile; fileRef = E28273D4140701FE00CD749E /* SerialCommunication.m */; };
 		E28273DC140703DA00CD749E /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E28273DB140703D900CD749E /* IOKit.framework */; };
+		E2C28EBC140A9B8E00CDD98B /* green-status.png in Resources */ = {isa = PBXBuildFile; fileRef = E2C28EB9140A9B8E00CDD98B /* green-status.png */; };
+		E2C28EBD140A9B8E00CDD98B /* red-status.png in Resources */ = {isa = PBXBuildFile; fileRef = E2C28EBA140A9B8E00CDD98B /* red-status.png */; };
+		E2C28EBE140A9B8E00CDD98B /* yellow-status.png in Resources */ = {isa = PBXBuildFile; fileRef = E2C28EBB140A9B8E00CDD98B /* yellow-status.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -64,6 +67,9 @@
 		E28273D3140701FE00CD749E /* SerialCommunication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SerialCommunication.h; sourceTree = "<group>"; };
 		E28273D4140701FE00CD749E /* SerialCommunication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SerialCommunication.m; sourceTree = "<group>"; };
 		E28273DB140703D900CD749E /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
+		E2C28EB9140A9B8E00CDD98B /* green-status.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "green-status.png"; sourceTree = "<group>"; };
+		E2C28EBA140A9B8E00CDD98B /* red-status.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "red-status.png"; sourceTree = "<group>"; };
+		E2C28EBB140A9B8E00CDD98B /* yellow-status.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "yellow-status.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +158,9 @@
 		E28273BA1406D33100CD749E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				E2C28EB9140A9B8E00CDD98B /* green-status.png */,
+				E2C28EBA140A9B8E00CDD98B /* red-status.png */,
+				E2C28EBB140A9B8E00CDD98B /* yellow-status.png */,
 				E28273BB1406D33100CD749E /* ArduinoCopterS107-Info.plist */,
 				E28273BC1406D33100CD749E /* InfoPlist.strings */,
 				E28273BF1406D33100CD749E /* main.m */,
@@ -216,6 +225,9 @@
 				E28273C41406D33100CD749E /* Credits.rtf in Resources */,
 				E28273CA1406D33100CD749E /* MainMenu.xib in Resources */,
 				E22EF9DB1408257700D6D70C /* RemoteControl.xib in Resources */,
+				E2C28EBC140A9B8E00CDD98B /* green-status.png in Resources */,
+				E2C28EBD140A9B8E00CDD98B /* red-status.png in Resources */,
+				E2C28EBE140A9B8E00CDD98B /* yellow-status.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

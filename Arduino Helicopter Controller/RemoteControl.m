@@ -8,9 +8,11 @@
 
 #import "RemoteControl.h"
 #import <dispatch/dispatch.h>
+#import "ArduinoCopterS107.h"
 
 #define CHANNEL1 0x31
 #define CHANNEL2 0x32
+#define CENTERED 63
 
 @implementation RemoteControl
 
@@ -33,11 +35,19 @@
 - (void) startTimer {
 	dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
 	
-	dispatch_source_t timer = dispatch_source_create(DISPATCH_SOURCE_TYPE_TIMER, 0, 0, queue); //run event handler on the default global queue
+	timer = dispatch_source_create(DISPATCH_SOURCE_TYPE_TIMER, 0, 0, queue); //run event handler on the default global queue
 	dispatch_time_t now = dispatch_walltime(DISPATCH_TIME_NOW, 0);
-	dispatch_source_set_timer(timer, now, 125ull * NSEC_PER_MSEC, 5000ull);
+	dispatch_source_set_timer(timer, now, 140ull * NSEC_PER_MSEC, 5000ull);
 	dispatch_source_set_event_handler(timer, ^{
 		[self sendPacket:CHANNEL1 yaw:[yaw intValue] pitch:[pitch intValue] throttle:[throttleJoystick intValue] trimAdjust:[trim intValue]];
+//		NSLog(@"%d %d %d %d", [yaw intValue], [pitch intValue], [throttleJoystick intValue], [trim intValue]);
+		if ([[NSApp delegate] isSerialPortConnected] == YES) {
+			
+			// set Status to green.
+		} else {
+			[self stopTimer];
+			// set status to red.
+		}
 	});
 	
 	
@@ -45,16 +55,13 @@
 	dispatch_resume(timer);
 }
 
-- (IBAction)tryToConnect:(id)sender {
-	//[serialCommunication writeByte:126]; // handshake.
-	if ([serialCommunication readByte] > 0) {
-		[connect setTitle:@"Disconnect"];
+- (void) stopTimer {
+	if (timer != nil) {
+//		dispatch_release(timer);
 	}
-
 }
 
 - (void) sendPacket:(int)channel yaw:(int)y pitch:(int)p throttle:(int)t trimAdjust:(int)trimAdjust {
-//	int throttleWithChannel = (channel == CHANNEL1) ? t : (t + 128);
 	y = y > 126 ? 126 : y;
 	p = p > 126 ? 126 : p;
 	t = t > 126 ? 126 : t;
@@ -71,11 +78,11 @@
 }
 
 - (void) RCRightJoystickX:(DDHidJoystick *)joystick valueChanged:(NSNumber *)value {
-	[yaw setIntValue:((~[value intValue]) + MAX_POSITION_ON_AXIS_XBOX) / MAX_POSITION_ON_AXIS_XBOX_STEP];
+	[yaw setIntValue:[self flattenWobbleyValues:((~[value intValue]) + MAX_POSITION_ON_AXIS_XBOX) / MAX_POSITION_ON_AXIS_XBOX_STEP sensitivity:10]];
 }
 
 - (void) RCRightJoystickY:(DDHidJoystick *)joystick valueChanged:(NSNumber *)value {
-	[pitch setIntValue:([value intValue] + MAX_POSITION_ON_AXIS_XBOX) / MAX_POSITION_ON_AXIS_XBOX_STEP];
+	[pitch setIntValue:[self flattenWobbleyValues:(([value intValue]) + MAX_POSITION_ON_AXIS_XBOX) / MAX_POSITION_ON_AXIS_XBOX_STEP sensitivity:12]];
 }
 
 - (void) RCButtonLB:(DDHidJoystick *)joystick state:(BOOL)pressed {
@@ -84,6 +91,24 @@
 
 - (void) RCButtonRB:(DDHidJoystick *)joystick state:(BOOL)pressed {
 	[trim setIntValue: [trim intValue] -1];
+}
+
+- (int) flattenWobbleyValues: (int) axisValue sensitivity:(int)sensitivity {
+	// 1 is really sensitive, treat her carfully ;)
+	// 127 is on off.
+	
+	if (axisValue > CENTERED) {
+		
+		if ((axisValue - sensitivity) < CENTERED) {
+			return CENTERED;
+		}
+	} else if (axisValue < CENTERED){
+		if ((axisValue + sensitivity) > CENTERED) {
+			return CENTERED;
+		}
+	}
+	
+	return axisValue;
 }
 
 @end

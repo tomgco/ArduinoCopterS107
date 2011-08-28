@@ -13,7 +13,8 @@
 
 @synthesize window = _window,
 						serialCommunication,
-						remoteControl;
+						remoteControl,
+						serialPortErrorMessage;
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
 	
@@ -25,8 +26,6 @@
 		[self updateSerialPortsInMenu:@"usbmodem"];
 	else 
 		[self updateSerialPortsInMenu:@""];
-	
-
 	
 }
 
@@ -44,15 +43,29 @@
 }
 
 - (void) openSerialConnection: (NSString *)location {
-	
-	[[serialPortsMenuList itemWithTitle:location] setState:NSOnState];
-	[serialCommunication openSerialPort:location baud:1200];
+	serialPortErrorMessage = [serialCommunication openSerialPort:location baud:300];
+	if (serialPortErrorMessage == nil) {
+		[[serialPortsMenuList itemWithTitle:location] setState:NSOnState];
+		serialPortConnected = YES;
+	} else {
+		serialPortConnected = NO;
+	}
 }
 
-- (IBAction)openChosenSerialConnection:(id)sender {
+- (IBAction) openChosenSerialConnection:(id)sender {
 	[self updateSerialPortsInMenu:[sender title]];
 	[self openSerialConnection:[sender title]];
 }
+
+- (BOOL) isSerialPortConnected {
+	return serialPortConnected;
+}
+
+- (NSString *) getSerialPortErrorMessage {
+	return serialPortErrorMessage;
+}
+
+
 
 
 @end

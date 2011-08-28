@@ -15,15 +15,20 @@
 	SerialCommunication *serialCommunication;
 	RemoteControl *remoteControl;
 	NSString *selectedSerialPort;
+	NSString *serialPortErrorMessage;
+	BOOL serialPortConnected;
 	IBOutlet NSMenu *serialPortsMenuList;
 }
 
 @property (strong) IBOutlet NSWindow *window;
 @property (retain) SerialCommunication *serialCommunication;
 @property (retain, nonatomic) IBOutlet RemoteControl *remoteControl;
+@property (retain, nonatomic) NSString *serialPortErrorMessage;
 
 - (void) updateSerialPortsInMenu: (NSString *) selectedItem;
 - (IBAction)openChosenSerialConnection:(id)sender;
 - (void) openSerialConnection: (NSString *)location;
 
+- (BOOL) isSerialPortConnected;
+- (NSString *) getSerialPortErrorMessage;
 @end

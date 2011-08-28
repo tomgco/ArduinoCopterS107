@@ -15,7 +15,7 @@
 	IBOutlet NSSlider *throttle, *trim, *yaw, *pitch;
 	NSSegmentedControl *channelSelect;
 	IBOutlet NSButton *connect;
-	
+	dispatch_source_t timer;
 	IBOutlet NSLevelIndicator *throttleJoystick;
 	
 	Xbox360Controller *controller;
@@ -24,8 +24,8 @@
 @property (retain, nonatomic) IBOutlet NSSegmentedControl *channelSelect;
 @property (retain, nonatomic) Xbox360Controller *controller;
 
-- (IBAction)tryToConnect:(id)sender;
 - (void) sendPacket:(int)channel yaw:(int)yaw pitch:(int)pitch throttle:(int)throttle trimAdjust:(int)trimAdjust;
 - (void) startTimer;
-
+- (void) stopTimer;
+- (int) flattenWobbleyValues: (int) axisValue sensitivity:(int)sensitivity;
 @end
