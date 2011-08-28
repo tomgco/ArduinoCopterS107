@@ -9,8 +9,8 @@
 #import "RemoteControl.h"
 #import <dispatch/dispatch.h>
 
-#define CHANNEL1 0
-#define CHANNEL2 1
+#define CHANNEL1 0x31
+#define CHANNEL2 0x32
 
 @implementation RemoteControl
 
@@ -54,8 +54,14 @@
 }
 
 - (void) sendPacket:(int)channel yaw:(int)y pitch:(int)p throttle:(int)t trimAdjust:(int)trimAdjust {
-	int throttleWithChannel = (channel == CHANNEL1) ? t : (t + 128);
-	NSString *packet = [[NSString alloc] initWithFormat:@"%c%c%c%c%c%c", 0x4C, 0x4F, y + 1, p + 1, throttleWithChannel + 1, trimAdjust + 1];
+//	int throttleWithChannel = (channel == CHANNEL1) ? t : (t + 128);
+	y = y > 126 ? 126 : y;
+	p = p > 126 ? 126 : p;
+	t = t > 126 ? 126 : t;
+	trimAdjust = trimAdjust > 126 ? 126 : trimAdjust;
+	
+	NSString *packet = [[NSString alloc] initWithFormat:@"%c%c%c%c%c%c%c", 0x4C, 0x4F, CHANNEL1, (uint8_t)y + 1, (uint8_t)p + 1, (int)t + 1, (uint8_t)trimAdjust + 1];
+	
 	[serialCommunication writePacket:packet];
 }			
 

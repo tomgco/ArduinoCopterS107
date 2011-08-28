@@ -68,8 +68,13 @@ static SerialCommunication *_sharedSerialConnection = nil;
 
 - (void) writePacket: (NSString*)packet {
 	if(serialFileDescriptor != -1) {
-		const char *cString = [packet UTF8String];
-		write(serialFileDescriptor, cString, 6);
+		char converted[([packet length] + 1)];
+		[packet getCString:converted maxLength:([packet length] + 1) encoding: NSISOLatin2StringEncoding];
+		write(serialFileDescriptor, converted, ([packet length] + 1));
+		for (int i = 0; i < ([packet length]); i++) {
+			
+			NSLog(@"%d", converted[i]);
+		}
 	} else {
 		NSLog(@"no Serial Port");
 	}
