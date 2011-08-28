@@ -46,7 +46,7 @@
 - (void) openSerialConnection: (NSString *)location {
 	
 	[[serialPortsMenuList itemWithTitle:location] setState:NSOnState];
-	[serialCommunication openSerialPort:location baud:300];
+	[serialCommunication openSerialPort:location baud:1200];
 }
 
 - (IBAction)openChosenSerialConnection:(id)sender {
