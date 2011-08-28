@@ -27,5 +27,4 @@
 - (NSString *) openSerialPort: (NSString *)serialPortFile baud: (speed_t)baudRate;
 - (void) writePacket: (NSString*)packet;
 - (long) readByte;
-- (int) isConnected;
 @end
